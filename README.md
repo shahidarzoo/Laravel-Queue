@@ -27,8 +27,8 @@ nano laravel-2019-05-15.log
 ```php
 use App\Jobs\NotificationJob;
 
-
- NotificationJob::dispatch($request->audience, $request->title, $request->description)->onQueue('notification')->delay(Carbon::now()->addSeconds(3));
+ NotificationJob::dispatch($request->audience, $request->title, $request->description)
+ ->onQueue('notification')->delay(Carbon::now()->addSeconds(3));
 ```
 
 ### App\Jobs
