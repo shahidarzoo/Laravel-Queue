@@ -11,7 +11,18 @@ php artisan migrate
 php artisan make:job SendEmailJob
 
 ```
+### Before Submit Data open cmd and run
+```php
 
+php artisan queue:work --queue=your queue name --tries=3
+
+```
+
+### Check Logs
+```php
+cd storage/logs/
+nano laravel-2019-05-15.log
+```
 ### Add this in Controller
 ```php
 use App\Jobs\NotificationJob;
